@@ -3,5 +3,22 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="phone" class="com.ioc.SpringIOC.Nokia"></bean>
+	<!-- bean creation -->
+	<bean id="phone" class="com.ioc.SpringIOC.beancreation.Nokia"></bean>
+
+	<!-- setterinjection -->
+	<bean id="employee" class="com.ioc.SpringIOC.setterinjection.Employee">
+		<property name="employeeId" value="1" />    <!-- property tag uses setter methods to inject value (Setter Injection) -->
+		<property name="employeeName" value="Hari" />  <!-- property tag uses setter methods to inject value (Setter Injection) -->
+	</bean>
+
+	<!-- constructor injection -->
+	<bean id="oldEmployee" class="com.ioc.SpringIOC.setterinjection.Employee">
+		<constructor-arg name="employeeId" value="20" type="int" />
+		<constructor-arg name="employeeName" value="Krishna"
+			type="String" />
+	</bean>
+
+
+
 </beans>
