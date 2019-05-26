@@ -1,4 +1,4 @@
-package com.ioc.SpringIOC.setterinjection;
+package com.ioc.SpringIOC.constructorAndSetterInjection;
 
 
 public class Employee {

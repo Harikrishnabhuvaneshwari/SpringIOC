@@ -1,4 +1,4 @@
-package com.ioc.SpringIOC.setterinjection;
+package com.ioc.SpringIOC.constructorAndSetterInjection;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
