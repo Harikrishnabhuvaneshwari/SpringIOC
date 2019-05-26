@@ -1,4 +1,4 @@
-package com.ioc.SpringIOC;
+package com.ioc.SpringIOC.beancreation;
 
 /**
  * @author hprakash
