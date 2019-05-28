@@ -7,16 +7,27 @@
 	<bean id="phone" class="com.ioc.SpringIOC.beancreation.Nokia"></bean>
 
 	<!-- setterinjection -->
-	<bean id="employee" class="com.ioc.SpringIOC.setterinjection.Employee">
+	<bean id="employee" class="com.ioc.SpringIOC.constructorAndSetterInjection.Employee">
 		<property name="employeeId" value="1" />    <!-- property tag uses setter methods to inject value (Setter Injection) -->
 		<property name="employeeName" value="Hari" />  <!-- property tag uses setter methods to inject value (Setter Injection) -->
 	</bean>
 
 	<!-- constructor injection -->
-	<bean id="oldEmployee" class="com.ioc.SpringIOC.setterinjection.Employee">
+	<bean id="oldEmployee" class="com.ioc.SpringIOC.constructorAndSetterInjection.Employee">
 		<constructor-arg name="employeeId" value="20" type="int" />
-		<constructor-arg name="employeeName" value="Krishna"
-			type="String" />
+		<constructor-arg name="employeeName" value="Krishna" type="String" />
+	</bean>
+	
+	<!-- injecting objects -->
+	<bean id="cheat" class="com.ioc.SpringIOC.injectingobjects.Examcheat"></bean>
+	
+	<bean id="student" class="com.ioc.SpringIOC.injectingobjects.Student">
+	<property name="studentId" value="234"/>
+	<property name="cheat" ref="cheat"></property>
+	</bean>
+	
+	<bean id="anotherStudent" class="com.ioc.SpringIOC.injectingobjects.AnotherStudent">
+	<constructor-arg name="cheat" ref="cheat" type="com.ioc.SpringIOC.injectingobjects.Examcheat"></constructor-arg>
 	</bean>
 
 
